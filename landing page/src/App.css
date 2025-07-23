@@ -1,0 +1,72 @@
+/* src/App.css */
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Your one and only background div */
+.background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Add before/after pseudo-elements to create the full animated background */
+.background::before,
+.background::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #000000 0deg,
+    #009dff 90deg,
+    #000000 180deg,
+    #0077ff 270deg,
+    #000000 360deg
+  );
+  animation: rotateBg 60s linear infinite;
+  filter: blur(200px);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.background::after {
+  animation: rotateBgReverse 80s linear infinite;
+  background: conic-gradient(
+    from 90deg,
+    #000000 0deg,
+    #005eff 90deg,
+    #000000 180deg,
+    #00bbff 270deg,
+    #000000 360deg
+  );
+  opacity: 0.3;
+}
+
+@keyframes rotateBg {
+  0% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
+
+@keyframes rotateBgReverse {
+  0% {
+    transform: rotate(360deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.4);
+  }
+}
