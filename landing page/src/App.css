@@ -70,3 +70,37 @@ body, html, #root {
     transform: rotate(0deg) scale(1.4);
   }
 }
+
+.brand-container {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.logo-placeholder {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.brand-text {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.zoro {
+  background: linear-gradient(to right, #00FFFF, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tek {
+  color: #ffffff;
+}
