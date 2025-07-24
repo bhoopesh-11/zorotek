@@ -169,13 +169,13 @@
   }
 
   .nav-brand {
-    display: none; /* Hide the original logo in mobile */
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .navbar {
-    width: 85%;  /* Adjusted for smaller screens */
+    width: 85%;  
   }
 
   .nav-content {
