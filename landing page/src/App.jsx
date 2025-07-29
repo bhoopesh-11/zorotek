@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -10,12 +11,16 @@ function App() {
             <circle cx="20" cy="20" r="20" fill="currentColor"/>
           </svg>
         </div>
+        
         <div className="brand-text">
           <span className="zoro">ZORO</span>
           <span className="tek">TEK</span>
+          
         </div>
       </div>
+      < Home/>
       <Navbar />
+      
     </div>
   );
 }
