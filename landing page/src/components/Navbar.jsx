@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import './Navbar.css';
+import { useState } from "react";
+import "./Navbar.css";
 
 const Navbar = () => {
-  const [activePage, setActivePage] = useState('home');
+  const [activePage, setActivePage] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,9 +13,11 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-content">
         <div className="nav-brand">
-          <svg width="30" height="30" viewBox="0 0 30 30">
-            <circle cx="15" cy="15" r="15" fill="currentColor"/>
-          </svg>
+          <img
+            src="/logo_zorotek_nobg.png"
+            alt="Zorotek Logo"
+            className="nav-logo-img"
+          />
         </div>
 
         <div className="mobile-brand">
@@ -29,39 +31,39 @@ const Navbar = () => {
           <span></span>
         </div>
 
-        <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-          <a 
-            href="#home" 
-            className={activePage === 'home' ? 'active' : ''}
-            onClick={() => setActivePage('home')}
+        <div className={`nav-links ${isOpen ? "active" : ""}`}>
+          <a
+            href="#home"
+            className={activePage === "home" ? "active" : ""}
+            onClick={() => setActivePage("home")}
           >
             Home
           </a>
-          <a 
-            href="#about" 
-            className={activePage === 'about' ? 'active' : ''}
-            onClick={() => setActivePage('about')}
+          <a
+            href="#about"
+            className={activePage === "about" ? "active" : ""}
+            onClick={() => setActivePage("about")}
           >
             About
           </a>
-          <a 
-            href="#services" 
-            className={activePage === 'services' ? 'active' : ''}
-            onClick={() => setActivePage('services')}
+          <a
+            href="#services"
+            className={activePage === "services" ? "active" : ""}
+            onClick={() => setActivePage("services")}
           >
             Works
           </a>
-          <a 
-            href="#pricing" 
-            className={activePage === 'pricing' ? 'active' : ''}
-            onClick={() => setActivePage('pricing')}
+          <a
+            href="#pricing"
+            className={activePage === "pricing" ? "active" : ""}
+            onClick={() => setActivePage("pricing")}
           >
             Pricing
           </a>
-          <a 
-            href="#contact" 
-            className={activePage === 'contact' ? 'active' : ''}
-            onClick={() => setActivePage('contact')}
+          <a
+            href="#contact"
+            className={activePage === "contact" ? "active" : ""}
+            onClick={() => setActivePage("contact")}
           >
             Contact
           </a>
